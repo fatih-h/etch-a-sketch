@@ -1,0 +1,89 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-container {
+    background-color: #f64c72;
+    height: 105vh;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 20% 75% 10%;
+    grid-template-areas:
+        "header header header"
+        "setting-container grid-container ."
+        "footer footer footer";
+
+
+}
+
+.header {
+    text-align: center;
+    font-size: 4rem;
+    grid-area: header;
+    background-color: #f64c72;
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+    color: #242582;
+    text-shadow: -1px -1px 10px white;
+}
+
+.setting-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20%;
+    gap: 1rem;
+    background-color: #f64c72;
+}
+
+.setting-container>* {
+    flex: 1 1 100%;
+    align-items: center;
+    justify-content: end;
+
+}
+
+.setting-container>button {
+    border-radius: 1rem;
+    background-color: #553d67;
+    font-size: 1rem;
+    color: white;
+    border: 1px solid #2f2fa2;
+}
+
+.grid-container {
+    background-color: white;
+    border: 0.5rem solid #2f2fa2;
+    grid-area: grid-container;
+    display: grid;
+    grid-template-rows: repeat(16, 1fr);
+    grid-template-columns: repeat(16, 1fr);
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #f64c72;
+    font-size: 1.5rem;
+    color: #99738e;
+    text-align: center;
+    padding-top: 0.2rem;
+}
+
+#label {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2rem;
+    color: white;
+    text-shadow: -1px -1px 5px black;
+}
